@@ -1,6 +1,6 @@
 const subscribeForm = document.querySelector('[data-id=subscribe-form]');
 const idForm = document.querySelector('[data-id=id-form]');
-const buttonAllTikets = document.querySelector('[data-id=buttonALLTikets]');
+const buttonALLTikets = document.querySelector('[data-id=buttonALLTikets]');
 
 subscribeForm.addEventListener('submit', e => {
     e.preventDefault();
@@ -10,7 +10,6 @@ subscribeForm.addEventListener('submit', e => {
     formData.append('id', null);
     formData.append('status', true);
     formData.append('created', new Date().toLocaleDateString());
-    
     xhr.open('POST', 'https://ahj-app.herokuapp.com/');
     xhr.send(formData);  
 });
@@ -34,7 +33,7 @@ idForm.addEventListener('submit', e => {
     });   
 });
 
-buttonAllTikets.addEventListener('click', () => {
+buttonALLTikets.addEventListener('click', () => {
     const xhr = new XMLHttpRequest();    
     const queryString = 'method=allTickets';
     xhr.open('GET', `https://ahj-app.herokuapp.com/?${queryString}`);
@@ -47,6 +46,7 @@ buttonAllTikets.addEventListener('click', () => {
                 console.error(e);
             }
         }
+
     }); 
 });
 
