@@ -1,8 +1,6 @@
 const subscribeForm = document.querySelector('[data-id=subscribe-form]');
 const idForm = document.querySelector('[data-id=id-form]');
 const buttonAllTikets = document.querySelector('[data-id=buttonALLTikets]');
-__webpack_base_uri__ = 'https://ahj-app.herokuapp.com';
-DEBUG (webpack-specific)
 
 subscribeForm.addEventListener('submit', e => {
     e.preventDefault();
@@ -13,7 +11,7 @@ subscribeForm.addEventListener('submit', e => {
     formData.append('status', true);
     formData.append('created', new Date().toLocaleDateString());
     
-    xhr.open('POST', 'https://ahj-app.herokuapp.com');
+    xhr.open('POST', 'https://ahj-app.herokuapp.com/');
     xhr.send(formData);  
 });
 

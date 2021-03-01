@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage",
-    "start": "webpack-dev-server",
+    "watch": "forever  --minUptime 1000 --spinSleepTime 1000 -w server.js",
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
     "lint": "eslint"
@@ -33,6 +33,7 @@
     "yarn": "^1.22.10"
   },
   "dependencies": {
-    "core-js": "3"
+    "core-js": "3",
+    "forever": "^3.0.4"
   }
 }

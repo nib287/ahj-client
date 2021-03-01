@@ -22,11 +22,6 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "[name].css"
         }),
-        // new CopyPlugin({
-        //     patterns: [
-        //       { from: './src/img', to: path.resolve(__dirname, 'dist/img') },
-        //     ],
-        // }),  
     ],
     
     devServer: {
